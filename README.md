@@ -15,7 +15,7 @@ Depois de publicar este repositório em `https://github.com/punkstarbr/bentola4`
 A instalação do pacote não precisa de `sudo`. Na primeira execução, o wrapper baixa automaticamente o Bento4 oficial:
 
 ```python
-!mp4decrypt --help
+!mp4decrypt 2>&1 | head -n 4
 ```
 
 Depois, use o comando normalmente:
@@ -78,7 +78,7 @@ O pacote depende de acesso à internet no primeiro download e acompanha os termo
 
 ```bash
 python -m pip install -e .
-mp4decrypt --help
+mp4decrypt 2>&1 | head -n 4
 ```
 
 ## Atualizações futuras
