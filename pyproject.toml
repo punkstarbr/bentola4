@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bentola4"
+version = "0.1.0"
+description = "Installer and Python wrapper for the official Bento4 command-line tools"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+  { name = "punkstarbr" }
+]
+keywords = ["bento4", "mp4decrypt", "mp4", "drm"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows"
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/punkstarbr/bentola4"
+Repository = "https://github.com/punkstarbr/bentola4"
+
+[project.scripts]
+bentola4 = "bentola4.cli:main"
+mp4decrypt = "bentola4.cli:mp4decrypt_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bentola4 = ["resources/*"]
